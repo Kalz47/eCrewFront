@@ -139,6 +139,9 @@ export default function ServiceDetailsKids() {
         </div>
       </div>
       <Footer />
+      {isBackdrop && (
+        <div onClick={() => setIsBackDrop(false)} className="backdrop"></div>
+      )}
     </>
   );
 }

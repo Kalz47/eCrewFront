@@ -140,6 +140,9 @@ export default function ServiceDetailsWomen() {
         </div>
       </div>
       <Footer />
+      {isBackdrop && (
+        <div onClick={() => setIsBackDrop(false)} className="backdrop"></div>
+      )}
     </>
   );
 }
