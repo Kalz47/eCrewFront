@@ -76,30 +76,59 @@ export default function ServiceDetailsGents() {
 
             <ServiceCardTopic Topic="Hair" />
             {!loading ? (
-              Services.map(
-                (service) =>
-                  service.serviceType === "Men" &&
-                  service.category === "Hair" && (
-                    <ServiceCard
-                      service={service}
-                      setIsBackDrop={setIsBackDrop}
-                    />
-                  )
+              location !== null ? (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Men" &&
+                    service.category === "Hair" &&
+                    service.location === location && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
+              ) : (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Men" &&
+                    service.category === "Hair" && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
               )
             ) : (
               <div>Loading...</div>
             )}
+
             <ServiceCardTopic Topic="Skin" />
             {!loading ? (
-              Services.map(
-                (service) =>
-                  service.serviceType === "Men" &&
-                  service.category === "Skin" && (
-                    <ServiceCard
-                      service={service}
-                      setIsBackDrop={setIsBackDrop}
-                    />
-                  )
+              location !== null ? (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Men" &&
+                    service.category === "Skin" &&
+                    service.location === location && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
+              ) : (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Men" &&
+                    service.category === "Skin" && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
               )
             ) : (
               <div>Loading...</div>

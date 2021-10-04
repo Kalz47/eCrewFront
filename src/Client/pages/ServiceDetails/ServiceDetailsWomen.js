@@ -13,7 +13,10 @@ export default function ServiceDetailsWomen() {
   // const { womenServices, womenLoading } = useSelector(
   //   (state) => state.womenService
   // );
+  const [isBackdrop, setIsBackDrop] = useState(false);
+
   const { Services, loading } = useSelector((state) => state.services);
+  const { location } = useSelector((state) => state.location);
 
   useEffect(() => {
     dispatch(getAllServices());
@@ -42,12 +45,29 @@ export default function ServiceDetailsWomen() {
           <Scrollbars style={{ height: 800 }}>
             <ServiceCardTopic Topic="Face" />
             {!loading ? (
-              Services.map(
-                (service) =>
-                  service.serviceType === "Women" &&
-                  service.category === "Face" && (
-                    <ServiceCard service={service} />
-                  )
+              location !== null ? (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Women" &&
+                    service.category === "Face" &&
+                    service.location === location && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
+              ) : (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Women" &&
+                    service.category === "Face" && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
               )
             ) : (
               <div>Loading...</div>
@@ -55,24 +75,58 @@ export default function ServiceDetailsWomen() {
 
             <ServiceCardTopic Topic="Hair" />
             {!loading ? (
-              Services.map(
-                (service) =>
-                  service.serviceType === "Women" &&
-                  service.category === "Hair" && (
-                    <ServiceCard service={service} />
-                  )
+              location !== null ? (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Women" &&
+                    service.category === "Hair" &&
+                    service.location === location && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
+              ) : (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Women" &&
+                    service.category === "Hair" && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
               )
             ) : (
               <div>Loading...</div>
             )}
             <ServiceCardTopic Topic="Skin" />
             {!loading ? (
-              Services.map(
-                (service) =>
-                  service.serviceType === "Women" &&
-                  service.category === "Skin" && (
-                    <ServiceCard service={service} />
-                  )
+              location !== null ? (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Women" &&
+                    service.category === "Skin" &&
+                    service.location === location && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
+              ) : (
+                Services.map(
+                  (service) =>
+                    service.serviceType === "Women" &&
+                    service.category === "Skin" && (
+                      <ServiceCard
+                        service={service}
+                        setIsBackDrop={setIsBackDrop}
+                      />
+                    )
+                )
               )
             ) : (
               <div>Loading...</div>
