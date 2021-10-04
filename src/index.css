@@ -1,0 +1,84 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidedrawer {
+  width: 70%;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+}
+
+.sidedrawer.show {
+  transform: translateX(0);
+}
+
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.hi {
+  background-color: black;
+}
+
+.bg-sitetheme-blue {
+  background-color: #000066;
+}
+
+.bg-sitetheme-lightblue {
+  background-color: #7d7db1;
+}
+
+.text-sitetheme-blue {
+  color: #000066;
+}
+
+.text-sitetheme-lightblue {
+  color: #7d7db1;
+}
+
+.border-sitetheme-blue {
+  border-color: #000066;
+}
+
+.border-sitetheme-lightblue {
+  border-color: #7d7db1;
+}
+
+/* Hover classes */
+
+.hover-bg-sitetheme-blue:hover {
+  background-color: #000066;
+}
+
+.hover-bg-sitetheme-lightblue:hover {
+  background-color: #7d7db1;
+}
+
+.hover-text-sitetheme-blue:hover {
+  color: #000066;
+}
+
+.hover-text-sitetheme-lightblue:hover {
+  color: #7d7db1;
+}
+
+.hover-border-sitetheme-blue:hover {
+  border-color: #000066;
+}
+
+.hover-border-sitetheme-lightblue:hover {
+  border-color: #7d7db1;
+}
