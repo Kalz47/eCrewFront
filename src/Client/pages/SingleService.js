@@ -207,8 +207,8 @@ export default function SingleService({ close, service, setIsBackDrop }) {
               </button>
             </div>
           </div>
-          <div className="m-12 h-36 flex flex-row justify-center hidden md:block">
-            <SingleServiceCard /> <SingleServiceCard /> <SingleServiceCard />{" "}
+          <div className="m-12 h-36 flex flex-row  hidden md:block">
+            <SingleServiceCard /> <SingleServiceCard /> <SingleServiceCard />
           </div>
           <div className="w-full mt-10 mr-10 flex justify-center">
             {service.video == "" ||
