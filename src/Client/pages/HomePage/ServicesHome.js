@@ -220,17 +220,24 @@ export default function ServicesHome({ Location }) {
           <Link to="/ServiceDetailsGents">
             {" "}
             <img src={ImgGents} />
+            <div className="text-sitetheme-blue text-center">
+              Gents Services
+            </div>
           </Link>
         </div>
         <div className="py-2 px-10 w-64">
           {" "}
           <Link to="/ServiceDetailsWomen">
             <img src={Imgwomen} />{" "}
+            <div className="text-sitetheme-blue text-center">
+              Women Services
+            </div>
           </Link>
         </div>
         <div className="py-2 px-10 w-56">
           <Link to="/ServiceDetailsKids">
             <img src={ImgKids} />{" "}
+            <div className="text-sitetheme-blue text-center">Kids Services</div>
           </Link>
         </div>
       </div>
