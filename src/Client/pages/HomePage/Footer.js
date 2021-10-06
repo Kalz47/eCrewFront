@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+              Contact US
             </h2>
             <nav className="list-none mb-10">
               <li>
@@ -27,7 +27,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Tel:{" "}
                 </Link>
               </li>
               <li>
@@ -35,7 +35,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Address:{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -43,22 +43,14 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
-                </Link>{" "}
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className=" no-underline text-gray-600  hover-text-sitetheme-blue"
-                >
-                  Contact Us
+                  Email:{" "}
                 </Link>{" "}
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+              INFORMATION
             </h2>
             <nav className="list-none mb-10">
               <li>
@@ -66,7 +58,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  About Us
                 </Link>{" "}
               </li>
               <li>
@@ -74,7 +66,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  FAQ{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -82,7 +74,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Privacy Policy{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -90,14 +82,14 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Terms & Conditions{" "}
                 </Link>{" "}
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+              SOCIAL{" "}
             </h2>
             <nav className="list-none mb-10">
               <li>
@@ -105,7 +97,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Facebook{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -113,7 +105,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Twitter{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -121,7 +113,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Instagram{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -129,14 +121,22 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Linkedin{" "}
+                </Link>{" "}
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  className=" no-underline text-gray-600  hover-text-sitetheme-blue"
+                >
+                  YouTube{" "}
                 </Link>{" "}
               </li>
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              CATEGORIES
+              JOIN WITH{" "}
             </h2>
             <nav className="list-none mb-10">
               <li>
@@ -144,7 +144,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Login{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -152,7 +152,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Register{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -160,7 +160,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Contact Us{" "}
                 </Link>{" "}
               </li>
               <li>
@@ -168,7 +168,7 @@ export default function Footer() {
                   to="/"
                   className=" no-underline text-gray-600  hover-text-sitetheme-blue"
                 >
-                  Contact Us
+                  Site Map{" "}
                 </Link>{" "}
               </li>
             </nav>
