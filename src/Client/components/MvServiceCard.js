@@ -24,11 +24,7 @@ export default function MvServiceCard() {
             </svg>
           </button>
           <div className="absolute inset-0 z-10 transition duration-300 ease-in-out "></div>
-          <div
-            className="relative cursor-pointer group z-10 px-10 pt-10 space-y-6 movie_info"
-            // data-lity=""
-            // href="https://www.youtube.com/embed/aSHs224Dge0"
-          >
+          <div className="relative cursor-pointer group z-10 px-10 pt-10 space-y-6 movie_info">
             <div className="poster__info align-self-end w-full">
               <div className="h-32"></div>
               <div className="space-y-6 detail_info">
@@ -95,11 +91,6 @@ export default function MvServiceCard() {
               </div>
             </div>
           </div>
-          {/* <img
-              className="absolute inset-0 transform w-full -translate-y-4"
-              src="http://image.tmdb.org/t/p/w342/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg"
-              style="filter: grayscale(0);"
-            /> */}
           <div className="poster__footer flex flex-row relative pb-10 space-x-4 z-10">
             <div
               className="flex items-center py-2 px-4 rounded-full mx-auto text-white bg-sitetheme-blue"
