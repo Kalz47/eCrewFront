@@ -7,7 +7,7 @@ export default function UserDetails({
   handleChange,
   handleProceed,
 }) {
-  const { userName, userEmail, address, city, province, userPhone, location } =
+  const { userName, userEmail, address, city, province, userPhone } =
     userValues;
 
   const [position, setPosition] = useState({
