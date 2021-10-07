@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
+import { addToCart } from "../../actions/cart";
 
 export default function MvServiceCard({ close, service, setIsBackDrop }) {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const [image, setImage] = useState();
+  // const handleImage = async () => {
+  //   const res = await axios.get(
+  //     `http://localhost:8000/api/servicesImage/${service._id}`
+  //   );
+  //   console.log("IMage ==> ", res);
+  // };
+
+  useEffect(() => {
+    setImage(`http://localhost:8000/api/servicesImage/${service._id}`);
+  }, []);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(service._id));
+    history.push("/cart");
+  };
   return (
     <div>
       <div className="mt-20 px-2 flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto">
@@ -11,9 +32,9 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
           <button
             onClick={() => {
               close();
-              setIsBackDrop(false);
+              // setIsBackDrop(false);
             }}
-            className=" text-gray-300  absolute top-2 right-2"
+            className=" text-gray-300  absolute top-2 right-0"
           >
             {" "}
             <svg
@@ -103,7 +124,12 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
               target="_blank"
               data-unsp-sanitized="clean"
             >
-              <div className="text-sm text-white ml-2 ">Add Item</div>
+              <div
+                onClick={addToCartHandler}
+                className="text-sm text-white ml-2 "
+              >
+                Add Item
+              </div>
             </div>
           </div>
         </div>
