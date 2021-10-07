@@ -9,6 +9,7 @@ import { useHistory } from "react-router";
 import SingleServiceCard from "../components/Card/SingleServiceCard";
 import placeholderimage from "../images/logo.png";
 import Popup from "reactjs-popup";
+import { Link } from "react-router-dom";
 
 export default function SingleService({ close, service, setIsBackDrop }) {
   const dispatch = useDispatch();
@@ -152,7 +153,7 @@ export default function SingleService({ close, service, setIsBackDrop }) {
               Location : {service.location}
             </span>
             <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s ">
-              <a className="text-sitetheme-blue">
+              <Link className="text-sitetheme-blue">
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
@@ -163,8 +164,8 @@ export default function SingleService({ close, service, setIsBackDrop }) {
                 >
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                 </svg>
-              </a>
-              <a className="text-sitetheme-blue">
+              </Link>
+              <Link className="text-sitetheme-blue">
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
@@ -175,8 +176,8 @@ export default function SingleService({ close, service, setIsBackDrop }) {
                 >
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                 </svg>
-              </a>
-              <a className="text-sitetheme-blue">
+              </Link>
+              <Link className="text-sitetheme-blue">
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
@@ -187,7 +188,7 @@ export default function SingleService({ close, service, setIsBackDrop }) {
                 >
                   <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                 </svg>
-              </a>
+              </Link>
             </span>
           </div>
           <p className="leading-relaxed w-screen">
@@ -197,9 +198,21 @@ export default function SingleService({ close, service, setIsBackDrop }) {
           </p>
           <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
             <div className="flex">
-              <img className=" ml-1  w-auto h-8" src={ProductLogo} />
-              <img className=" ml-1  w-auto h-8" src={ProductLogo1} />
-              <img className=" ml-1  w-auto h-8" src={ProductLogo2} />
+              <img
+                className=" ml-1  w-auto h-8"
+                alt="meaningfull"
+                src={ProductLogo}
+              />
+              <img
+                className=" ml-1  w-auto h-8"
+                alt="meaningfull"
+                src={ProductLogo1}
+              />
+              <img
+                className=" ml-1  w-auto h-8"
+                alt="meaningfull"
+                src={ProductLogo2}
+              />
             </div>
           </div>
           <div className="flex justify-around ">
@@ -293,8 +306,8 @@ export default function SingleService({ close, service, setIsBackDrop }) {
             <SingleServiceCard /> <SingleServiceCard /> <SingleServiceCard />
           </div>
           <div className="w-full mt-10 mr-10 flex justify-center">
-            {service.video == "" ||
-            service.video == undefined ||
+            {service.video === "" ||
+            service.video === undefined ||
             service.video == null ? null : (
               <div className="">
                 <ReactPlayer width="90%" height="90%" url={service.video} />

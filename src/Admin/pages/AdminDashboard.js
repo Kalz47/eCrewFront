@@ -9,7 +9,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     dispatch(getCart());
-  }, []);
+  }, [dispatch]);
   return (
     <div className=" grid grid-cols-5 gap-4	h-screen ">
       <div className="flex flex-col border-r border-solid">

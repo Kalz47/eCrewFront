@@ -262,7 +262,7 @@ export default function Home() {
           <div className="py-2 px-10 w-56">
             <Link to="/ServiceDetailsGents">
               {" "}
-              <img src={ImgGents} />
+              <img alt="meaningfull" src={ImgGents} />
               <div className="text-sitetheme-blue text-center">
                 Gents Services
               </div>
@@ -271,7 +271,7 @@ export default function Home() {
           <div className="py-2 px-10 w-64">
             {" "}
             <Link to="/ServiceDetailsWomen">
-              <img src={Imgwomen} />{" "}
+              <img alt="meaningfull" src={Imgwomen} />{" "}
               <div className="text-sitetheme-blue text-center">
                 Women Services
               </div>
@@ -279,7 +279,7 @@ export default function Home() {
           </div>
           <div className="py-2 px-10 w-56">
             <Link to="/ServiceDetailsKids">
-              <img src={ImgKids} />{" "}
+              <img alt="meaningfull" src={ImgKids} />{" "}
               <div className="text-sitetheme-blue text-center">
                 Kids Services
               </div>

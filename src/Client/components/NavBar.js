@@ -11,7 +11,7 @@ export default function NavBar({ click }) {
     <>
       <div className="h-14 flex items-center px-4 justify-between bg-sitetheme-blue text-white">
         <NavLink to="" className="" href="#pablo">
-          <img src={logo} className="w-10 h-10 shadow-md " />
+          <img alt="meaningfull" src={logo} className="w-10 h-10 shadow-md " />
         </NavLink>{" "}
         <div className="space-x-6  items-center sm:block hidden ">
           <NavLink activeStyle={{ color: "yellow" }} to="">

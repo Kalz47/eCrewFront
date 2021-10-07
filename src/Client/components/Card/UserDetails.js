@@ -136,12 +136,12 @@ export default function UserDetails({
                 Terms of Service
               </Link>{" "}
               and
-              <a
+              <Link
                 className="no-underline border-b border-grey-dark text-grey-dark"
                 href="#"
               >
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </div>
 

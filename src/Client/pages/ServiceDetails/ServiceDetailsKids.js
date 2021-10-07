@@ -19,7 +19,7 @@ export default function ServiceDetailsKids() {
   console.log(location);
   useEffect(() => {
     dispatch(getAllServices());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
@@ -135,7 +135,7 @@ export default function ServiceDetailsKids() {
 
         {/* <!--Card 3--> */}
         <div className="border-r border-gray-200">
-          <img className="pt-44" src={ServiceImage} />
+          <img alt="meaningfull" className="pt-44" src={ServiceImage} />
         </div>
       </div>
       <Footer />
