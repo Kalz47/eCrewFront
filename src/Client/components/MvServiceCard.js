@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MvServiceCard() {
+export default function MvServiceCard({ close, service, setIsBackDrop }) {
   return (
     <div>
       <div className="mt-20 px-2 flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto">
@@ -8,7 +8,13 @@ export default function MvServiceCard() {
           className="overflow-hidden rounded-xl relative transform hover:-translate-y-2 transition ease-in-out duration-500 shadow-lg hover:shadow-2xl movie-item text-white movie-card"
           data-movie-id="438631"
         >
-          <button className=" text-gray-300  absolute top-2 right-2">
+          <button
+            onClick={() => {
+              close();
+              setIsBackDrop(false);
+            }}
+            className=" text-gray-300  absolute top-2 right-2"
+          >
             {" "}
             <svg
               class="w-6 h-6"
@@ -50,25 +56,29 @@ export default function MvServiceCard() {
                     </div>
                   </div> */}
                   <h3
-                    className="text-2xl font-bold text-white"
+                    className="text-2xl font-bold text-sitetheme-blue"
                     data-unsp-sanitized="clean"
                   >
-                    Title
+                    {service.name}{" "}
                   </h3>
                 </div>
                 <div className="flex flex-row justify-between datos">
                   <div className="flex flex-col datos_col">
                     <div className="popularity text-sitetheme-blue">
-                      1 hour{" "}
+                      {service.time}{" "}
                     </div>
                     <div className="text-sm text-gray-700">Time:</div>
                   </div>
                   <div className="flex flex-col datos_col">
-                    <div className="release text-sitetheme-blue">Dehiwala </div>
+                    <div className="release text-sitetheme-blue">
+                      {service.location}{" "}
+                    </div>
                     <div className="text-sm text-gray-700">Location:</div>
                   </div>
                   <div className="flex flex-col datos_col">
-                    <div className="release text-sitetheme-blue">123 LKR</div>
+                    <div className="release text-sitetheme-blue">
+                      {service.price} LKR
+                    </div>
                     <div className="text-sm text-gray-700">Price:</div>
                   </div>
                 </div>
@@ -78,14 +88,9 @@ export default function MvServiceCard() {
                     Description:
                   </div>
                   <p className="text-xs text-gray-700 mb-6">
-                    Paul Atreides, a brilliant and gifted young man born into a
-                    great destiny beyond his understanding, must travel to the
-                    most dangerous planet in the universe to ensure the future
-                    of his family and his people. As malevolent forces explode
-                    into conflict over the planet's exclusive supply of the most
-                    precious resource in existence-a commodity capable of
-                    unlocking humanity's greatest potential-only those who can
-                    conquer their fear will survive.
+                    {service.features.map((f) => (
+                      <div>{f}</div>
+                    ))}
                   </p>
                 </div>
               </div>
