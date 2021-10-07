@@ -22,6 +22,10 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
     dispatch(addToCart(service._id));
     history.push("/cart");
   };
+  const handleButton = () => {
+    close();
+    setIsBackDrop(false);
+  };
   return (
     <div>
       <div className="mt-20 px-2 flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto">
@@ -29,11 +33,12 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
           className="overflow-hidden rounded-xl relative transform hover:-translate-y-2 transition ease-in-out duration-500 shadow-lg hover:shadow-2xl movie-item text-white movie-card"
           data-movie-id="438631"
         >
-          <button
-            onClick={() => {
-              close();
-              // setIsBackDrop(false);
-            }}
+          {/* <button
+            onClick={handleButton}
+            //   () => {
+            //   close();
+            //   setIsBackDrop(false);
+            // }
             className=" text-gray-300  absolute top-2 right-0"
           >
             {" "}
@@ -49,8 +54,8 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </button>
-          <div className="absolute inset-0 z-10 transition duration-300 ease-in-out "></div>
+          </button> */}
+          <div className="absolute inset-0 z-10 transition duration-300 ease-in-out mt-40 "></div>
           <div className="relative cursor-pointer group z-10 px-10 pt-10 space-y-6 movie_info">
             <div className="poster__info align-self-end w-full">
               <div className="h-32"></div>
@@ -117,18 +122,27 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
               </div>
             </div>
           </div>
-          <div className="poster__footer flex flex-row relative pb-10 space-x-4 z-10">
+          <div className="flex flex-row relative pb-2 space-x-4 z-10">
             <div
               className="flex items-center py-2 px-4 rounded-full mx-auto text-white bg-sitetheme-blue"
               href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20210915T010000Z%2F20210915T010000Z&amp;text=Dune%20%2D%20Movie%20Premiere&amp;location=http%3A%2F%2Fmoviedates.info&amp;details=This%20reminder%20was%20created%20through%20http%3A%2F%2Fmoviedates.info"
               target="_blank"
               data-unsp-sanitized="clean"
             >
-              <div
-                onClick={addToCartHandler}
-                className="text-sm text-white ml-2 "
-              >
+              <div onClick={addToCartHandler} className="text-sm text-white  ">
                 Add Item
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row relative pb-10 space-x-4 z-10">
+            <div
+              className="flex items-center py-2 px-4 rounded-full mx-auto text-white bg-sitetheme-blue"
+              href="http://www.google.com/calendar/event?action=TEMPLATE&amp;dates=20210915T010000Z%2F20210915T010000Z&amp;text=Dune%20%2D%20Movie%20Premiere&amp;location=http%3A%2F%2Fmoviedates.info&amp;details=This%20reminder%20was%20created%20through%20http%3A%2F%2Fmoviedates.info"
+              target="_blank"
+              data-unsp-sanitized="clean"
+            >
+              <div onClick={handleButton} className="text-sm text-white ">
+                Close
               </div>
             </div>
           </div>
