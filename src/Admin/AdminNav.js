@@ -10,17 +10,17 @@ export default function AdminNav() {
             <div className="flex space-x-4">
               {/* <!-- logo --> */}
               <div>
-                <a
+                {/* <a
                   href="#"
                   className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900"
                 >
                   <span className="font-bold">Enter Logo</span>
-                </a>
+                </a> */}
               </div>
 
               {/* <!-- primary nav --> */}
               <div className="hidden md:flex items-center space-x-1">
-                <a
+                {/* <a
                   href="#"
                   className="py-5 px-3 text-gray-700 hover:text-gray-900"
                 >
@@ -32,13 +32,13 @@ export default function AdminNav() {
                   className="py-5 px-3 text-gray-700 hover:text-gray-900"
                 >
                   Pricing
-                </a>
+                </a> */}
               </div>
             </div>
 
             {/* <!-- secondary nav --> */}
             <div className="hidden md:flex items-center space-x-1">
-              <a href="" className="py-5 px-3">
+              {/* <a href="" className="py-5 px-3">
                 Login
               </a>
               <a
@@ -46,7 +46,7 @@ export default function AdminNav() {
                 className="py-2 px-3 bg-yellow-400 hover:bg-yellow-300 text-yellow-900 hover:text-yellow-800 rounded transition duration-300"
               >
                 Signup
-              </a>
+              </a> */}
             </div>
 
             {/* <!-- mobile button goes here --> */}
@@ -73,12 +73,12 @@ export default function AdminNav() {
 
         {/* <!-- mobile menu --> */}
         <div className="mobile-menu hidden md:hidden">
-          <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
+          {/* <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Features
           </a>
           <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
             Pricing
-          </a>
+          </a> */}
         </div>
       </nav>
     </div>

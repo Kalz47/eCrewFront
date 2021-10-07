@@ -4,7 +4,7 @@ import OurTeam from "./HomePage/OurTeam";
 import Typed from "react-typed";
 import LocationDropDownButton from "../components/buttons/LocationDropDownButton";
 import { useDispatch } from "react-redux";
-import { SET_LOCATION, REMOVE_LOCATION } from "../../actions/type";
+import { SET_LOCATION } from "../../actions/type";
 import WelcomePageCarosel from "../components/WelcomePageCarosel/WelcomePageCarosel";
 import ServiceList from "../components/ServiceList";
 import { Scrollbars } from "react-custom-scrollbars";
@@ -28,7 +28,7 @@ export default function Home() {
         payload: Location,
       });
     }
-  }, [Location]);
+  }, [Location, dispatch]);
 
   const handleChange = (e) => {
     setlocation(e.target.value);

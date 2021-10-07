@@ -18,7 +18,7 @@ export default function ServiceDetailsGents() {
 
   useEffect(() => {
     dispatch(getAllServices());
-  }, []);
+  }, [dispatch]);
 
   console.log("services =====> ", Services);
 

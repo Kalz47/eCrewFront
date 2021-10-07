@@ -5,7 +5,7 @@ import BookingDetails from "../../Admin/components/BookingDetails";
 
 export default function Dashboard() {
   const dispatch = useDispatch();
-  const { cart, cartLoading } = useSelector((state) => state.cart);
+  const { cart } = useSelector((state) => state.cart);
 
   useEffect(() => {
     dispatch(getCart());

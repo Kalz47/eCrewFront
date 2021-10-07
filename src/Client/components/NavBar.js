@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useSelector } from "react-redux";
 
 export default function NavBar({ click }) {
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  // const [navbarOpen, setNavbarOpen] = React.useState(false);
   const { cartItems } = useSelector((state) => state.cart);
 
   return (

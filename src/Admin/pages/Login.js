@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import AdminNav from "../AdminNav";
 
 export default function Login() {
