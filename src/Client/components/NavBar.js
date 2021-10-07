@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useSelector } from "react-redux";
+import { yellow } from "@material-ui/core/colors";
 
 export default function NavBar({ click }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -10,16 +11,16 @@ export default function NavBar({ click }) {
   return (
     <>
       <div className="h-14 flex items-center px-4 justify-between bg-sitetheme-blue text-white">
-        <Link to="/" className="" href="#pablo">
+        <NavLink to="home" className="" href="#pablo">
           <img src={logo} className="w-10 h-10 shadow-md " />
-        </Link>{" "}
+        </NavLink>{" "}
         <div className="space-x-6  items-center sm:block hidden ">
-          <Link to="/">
+          <NavLink to="home" activeStyle={{ color: "yellow" }}>
             {" "}
             <i class="fas fa-home pr-2 mt-1"></i>
             Home
-          </Link>
-          <Link to="/cart">
+          </NavLink>
+          <NavLink to="cart" activeStyle={{ color: "yellow" }}>
             {" "}
             <span class="font-sans block lg:inline-block align-middle text-white">
               <span href="#" role="button" class="relative flex">
@@ -35,17 +36,17 @@ export default function NavBar({ click }) {
               </span>
             </span>{" "}
             Cart
-          </Link>
-          <Link to="/aboutUs">
+          </NavLink>
+          <NavLink to="aboutUs" activeStyle={{ color: "yellow" }}>
             {" "}
             <i class="far fa-address-card pr-2 mt-1"></i>
             About
-          </Link>
-          <Link to="/contactUs">
+          </NavLink>
+          <NavLink to="contactUs" activeStyle={{ color: "yellow" }}>
             {" "}
             <i class="far fa-id-badge pr-2 mt-1"></i>
             Contact
-          </Link>
+          </NavLink>
         </div>
         <button className="sm:hidden block" onClick={click}>
           <i className="fas fa-bars"></i>
