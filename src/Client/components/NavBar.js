@@ -10,11 +10,11 @@ export default function NavBar({ click }) {
   return (
     <>
       <div className="h-14 flex items-center px-4 justify-between bg-sitetheme-blue text-white">
-        <NavLink to="home" className="" href="#pablo">
+        <NavLink to="" className="" href="#pablo">
           <img src={logo} className="w-10 h-10 shadow-md " />
         </NavLink>{" "}
         <div className="space-x-6  items-center sm:block hidden ">
-          <NavLink activeStyle={{ color: "yellow" }} to="home">
+          <NavLink activeStyle={{ color: "yellow" }} to="">
             {" "}
             <i class="fas fa-home pr-2 mt-1"></i>
             Home

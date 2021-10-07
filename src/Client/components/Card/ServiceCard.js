@@ -119,7 +119,7 @@ export default function ServiceCard({ service, setIsBackDrop }) {
                               className="no-underline text-sitetheme-blue flex items-center"
                             >
                               {" "}
-                              Vivew More{" "}
+                              View More{" "}
                             </button>
                           </div>
                         }

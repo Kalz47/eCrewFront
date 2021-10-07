@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
+import Popup from "reactjs-popup";
 import { addToCart } from "../../actions/cart";
 
 export default function MvServiceCard({ close, service, setIsBackDrop }) {
@@ -26,6 +27,14 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
     close();
     setIsBackDrop(false);
   };
+  const goToCart = () => {
+    history.push("/cart");
+  };
+
+  const handleBackdrop = () => {
+    setIsBackDrop(true);
+  };
+
   return (
     <div>
       <div className="mt-20 px-2 flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto">
@@ -33,28 +42,6 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
           className="overflow-hidden rounded-xl relative transform hover:-translate-y-2 transition ease-in-out duration-500 shadow-lg hover:shadow-2xl movie-item text-white movie-card"
           data-movie-id="438631"
         >
-          {/* <button
-            onClick={handleButton}
-            //   () => {
-            //   close();
-            //   setIsBackDrop(false);
-            // }
-            className=" text-gray-300  absolute top-2 right-0"
-          >
-            {" "}
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button> */}
           <div className="absolute inset-0 z-10 transition duration-300 ease-in-out mt-40 "></div>
           <div className="relative cursor-pointer group z-10 px-10 pt-10 space-y-6 movie_info">
             <div className="poster__info align-self-end w-full">
@@ -129,9 +116,80 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
               target="_blank"
               data-unsp-sanitized="clean"
             >
-              <div onClick={addToCartHandler} className="text-sm text-white  ">
-                Add Item
-              </div>
+              <Popup
+                trigger={
+                  <button
+                    onClick={() => {
+                      return addToCartHandler();
+                      handleBackdrop();
+                    }}
+                    className="text-sm text-white"
+                  >
+                    Add Item
+                  </button>
+                }
+                modal
+                nested
+              >
+                {(close) => (
+                  <div className="modal">
+                    <div className="w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white ">
+                      <button
+                        className=" text-gray-300  absolute top-2 right-2"
+                        onClick={() => {
+                          close();
+                          setIsBackDrop(false);
+                        }}
+                      >
+                        {" "}
+                        <svg
+                          class="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                      {/* <!--content--> */}
+                      <div className="">
+                        {/* <!--body--> */}
+                        <div className="text-center p-5 flex-auto justify-center">
+                          <span className="w-16 h-16 flex items-center text-sitetheme-blue mx-auto mb-8">
+                            <i class="far fa-check-circle fa-5x"></i>
+                          </span>
+                          <p className="text-sm text-gray-500 px-8">
+                            A new item has been added to your Shopping Cart. You
+                            {/* now have {cartItems.length} items in your Shopping */}
+                            Cart.
+                          </p>
+                        </div>
+                        {/* <!--footer--> */}
+                        <div className="p-3  mt-2 text-center space-x-4 md:block">
+                          <button
+                            onClick={goToCart}
+                            className="mb-2 md:mb-0 bg-sitetheme-blue border border-thbg-sitetheme-blue px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-white hover-text-sitetheme-blue hover-border-sitetheme-blue"
+                          >
+                            View Shopping Cart{" "}
+                          </button>
+                          <button
+                            onClick={() => {
+                              close();
+                            }}
+                            className="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border border-sitetheme-blue text-sitetheme-blue rounded-full hover:shadow-lg hover-bg-sitetheme-blue hover:text-white"
+                          >
+                            Contnue Shopping{" "}
+                          </button>
+                        </div>
+                      </div>
+                    </div>{" "}
+                  </div>
+                )}
+              </Popup>
             </div>
           </div>
           <div className="flex flex-row relative pb-10 space-x-4 z-10">

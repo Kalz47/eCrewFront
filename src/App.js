@@ -49,7 +49,7 @@ function App() {
         {/* Testing routes */}
         <Route path="/test" exact component={test}></Route>
         {/* client routes */}
-        <Route path="/home" exact component={Home}></Route>
+        <Route path="/" exact component={Home}></Route>
         <Route path="/login" exact component={Login}></Route>
         <Route path="/cartAlert" exact component={cartAlert}></Route>
         <Route path="/register" exact component={Register}></Route>

@@ -8,6 +8,7 @@ import { addToCart } from "../../actions/cart";
 import { useHistory } from "react-router";
 import SingleServiceCard from "../components/Card/SingleServiceCard";
 import placeholderimage from "../images/logo.png";
+import Popup from "reactjs-popup";
 
 export default function SingleService({ close, service, setIsBackDrop }) {
   const dispatch = useDispatch();
@@ -28,6 +29,15 @@ export default function SingleService({ close, service, setIsBackDrop }) {
     dispatch(addToCart(service._id));
     history.push("/cart");
   };
+
+  const goToCart = () => {
+    history.push("/cart");
+  };
+
+  const handleBackdrop = () => {
+    setIsBackDrop(true);
+  };
+
   return (
     <>
       <div className="lg:w-4/5 mx-auto w-80 flex flex-wrap bg-white rounded overflow-hidden shadow-lg pin-r pin-y relative backdrop-filter backdrop-blur">
@@ -199,12 +209,84 @@ export default function SingleService({ close, service, setIsBackDrop }) {
               </span>
             </div>
             <div>
-              <button
-                onClick={addToCartHandler}
-                className="flex w-40 justify-center py-3 px-6  rounded-full bg-sitetheme-blue text-white  hover:bg-white hover-text-sitetheme-blue border hover-border-sitetheme-blue"
+              {/* code start */}
+
+              <Popup
+                trigger={
+                  <button
+                    onClick={() => {
+                      addToCartHandler();
+                      handleBackdrop();
+                    }}
+                    className="flex w-40 justify-center py-3 px-6  rounded-full bg-sitetheme-blue text-white  hover:bg-white hover-text-sitetheme-blue border hover-border-sitetheme-blue"
+                  >
+                    Add
+                  </button>
+                }
+                modal
+                nested
               >
-                Add
-              </button>
+                {(close) => (
+                  <div className="modal">
+                    <div className="w-full  max-w-lg p-5 relative mx-auto my-auto rounded-xl shadow-lg  bg-white ">
+                      <button
+                        className=" text-gray-300  absolute top-2 right-2"
+                        onClick={() => {
+                          close();
+                          setIsBackDrop(false);
+                        }}
+                      >
+                        {" "}
+                        <svg
+                          class="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                      {/* <!--content--> */}
+                      <div className="">
+                        {/* <!--body--> */}
+                        <div className="text-center p-5 flex-auto justify-center">
+                          <span className="w-16 h-16 flex items-center text-sitetheme-blue mx-auto mb-8">
+                            <i class="far fa-check-circle fa-5x"></i>
+                          </span>
+                          <p className="text-sm text-gray-500 px-8">
+                            A new item has been added to your Shopping Cart. You
+                            {/* now have {cartItems.length} items in your Shopping */}
+                            Cart.
+                          </p>
+                        </div>
+                        {/* <!--footer--> */}
+                        <div className="p-3  mt-2 text-center space-x-4 md:block">
+                          <button
+                            onClick={goToCart}
+                            className="mb-2 md:mb-0 bg-sitetheme-blue border border-thbg-sitetheme-blue px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-white hover-text-sitetheme-blue hover-border-sitetheme-blue"
+                          >
+                            View Shopping Cart{" "}
+                          </button>
+                          <button
+                            onClick={() => {
+                              close();
+                            }}
+                            className="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border border-sitetheme-blue text-sitetheme-blue rounded-full hover:shadow-lg hover-bg-sitetheme-blue hover:text-white"
+                          >
+                            Contnue Shopping{" "}
+                          </button>
+                        </div>
+                      </div>
+                    </div>{" "}
+                  </div>
+                )}
+              </Popup>
+
+              {/* code stop */}
             </div>
           </div>
           <div className="m-12 h-36 flex flex-row">
