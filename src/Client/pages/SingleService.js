@@ -185,7 +185,7 @@ export default function SingleService({ close, service, setIsBackDrop }) {
               <li>{m}</li>
             ))}
           </p>
-          <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5 hidden md:block">
+          <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
             <div className="flex">
               <img className=" ml-1  w-auto h-8" src={ProductLogo} />
               <img className=" ml-1  w-auto h-8" src={ProductLogo1} />
@@ -207,7 +207,7 @@ export default function SingleService({ close, service, setIsBackDrop }) {
               </button>
             </div>
           </div>
-          <div className="m-12 h-36 flex flex-row  hidden md:block">
+          <div className="m-12 h-36 flex flex-row">
             <SingleServiceCard /> <SingleServiceCard /> <SingleServiceCard />
           </div>
           <div className="w-full mt-10 mr-10 flex justify-center">
