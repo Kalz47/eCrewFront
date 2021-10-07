@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "react-typed";
 import LocationDropDownButton from "../../components/buttons/LocationDropDownButton";
 import { useDispatch } from "react-redux";
 import { SET_LOCATION, REMOVE_LOCATION } from "../../../actions/type";
 import WelcomePageCarosel from "../../components/WelcomePageCarosel/WelcomePageCarosel";
 import "../../components/WelcomePageCarosel/WelcomePageCarosel";
+import { useHistory } from "react-router-dom";
 
-export default function Welcome({ Location, setlocation }) {
+export default function Welcome({ Location, setlocation, myRef }) {
+  const newRef = useRef();
   const dispatch = useDispatch();
+  const history = useHistory();
   console.log(Location);
 
   useEffect(() => {
@@ -18,6 +21,13 @@ export default function Welcome({ Location, setlocation }) {
       });
     }
   }, [Location]);
+
+  const handleChange = (e) => {
+    setlocation(e.target.value);
+    if (newRef && newRef.current) {
+      newRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <div className="md:flex md:h-screen  md:mr-0 mr-10 w-full h-96">
@@ -34,12 +44,13 @@ export default function Welcome({ Location, setlocation }) {
               typeSpeed={70}
             />
           </p>
-          <div className="container flex mx-auto mt-4">
+          <div ref={newRef} className="container flex mx-auto mt-4">
             <div className="flex ">
               <div className="w-full bg-transparent relative inline-flex">
                 <LocationDropDownButton
                   Location={Location}
                   setlocation={setlocation}
+                  handleChange={handleChange}
                 />
               </div>
             </div>

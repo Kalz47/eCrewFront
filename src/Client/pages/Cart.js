@@ -10,7 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToDb, removeFromCart } from "../../actions/cart";
 import { getCouponByName } from "../../actions/coupon";
 
-export default function Cart({ close }) {
+export default function Cart({ close, history }) {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
   const { coupon, validate, couponLoading, error, number } = useSelector(
@@ -80,9 +80,10 @@ export default function Cart({ close }) {
     e.preventDefault();
     const data = { userValues, location, price, cartItems };
     dispatch(addToDb(data));
+
     setTimeout(() => {
-      window.location.reload(10);
-    }, 2000);
+      history.push("/home");
+    }, [1000]);
   };
 
   useEffect(() => {

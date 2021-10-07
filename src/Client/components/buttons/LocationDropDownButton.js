@@ -1,4 +1,8 @@
-export default function LocationDropDownButton({ Location, setlocation }) {
+export default function LocationDropDownButton({
+  Location,
+  setlocation,
+  handleChange,
+}) {
   return (
     <div class="relative inline-flex">
       <svg
@@ -13,7 +17,7 @@ export default function LocationDropDownButton({ Location, setlocation }) {
         />
       </svg>
       <select
-        onChange={(e) => setlocation(e.target.value)}
+        onChange={handleChange}
         class="border border-sitetheme-blue rounded-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
       >
         <option>Colombo</option>

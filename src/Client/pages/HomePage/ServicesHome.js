@@ -9,10 +9,10 @@ import Imgwomen from "../../images/home/Services/profile/Women.png";
 import ImgKids from "../../images/home/Services/profile/Kids.png";
 import { Link } from "react-router-dom";
 
-export default function ServicesHome({ Location }) {
+export default function ServicesHome({ Location, myRef }) {
   console.log(Location);
   return (
-    <>
+    <div ref={myRef}>
       {/* Desktop View */}
       <div className="hidden sm:block">
         {/* <!-- Section Hero --> */}
@@ -241,6 +241,6 @@ export default function ServicesHome({ Location }) {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
