@@ -49,7 +49,7 @@ export const login = (value) => async (dispatch) => {
     });
     dispatch(loadUser());
   } catch (error) {
-    const errors = error.response.data.errors;
+    // const errors = error.response.data.errors;
     console.log(error);
     dispatch({
       type: LOGIN_FAIL,
@@ -78,7 +78,7 @@ export const registerUser = (formData) => async (dispatch) => {
     });
     dispatch(loadUser());
   } catch (error) {
-    const errors = error.response.data.errors;
+    // const errors = error.response.data.errors;
     console.log(error);
     dispatch({
       type: REGISTER_FAIL,

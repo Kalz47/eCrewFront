@@ -87,7 +87,7 @@ export default function Cart({ history }) {
       });
     });
     console.log("LOCATION", location);
-  }, []);
+  }, [location]);
 
   return (
     <div className="md:relative lg:relative ">

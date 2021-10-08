@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LocationPicker from "react-location-picker";
 import { Link } from "react-router-dom";
 
@@ -10,12 +10,6 @@ export default function UserDetails({
 }) {
   const { userName, userEmail, address, city, province, userPhone } =
     userValues;
-
-  const [position, setPosition] = useState({
-    lat: "",
-    lng: "",
-  });
-  const [addresss, setAddresss] = useState("");
 
   const defaultPosition = {
     lat: 27.9878,
@@ -116,8 +110,7 @@ export default function UserDetails({
               mapElement={<div style={{ height: "200px" }} />}
               defaultPosition={defaultPosition}
               onChange={({ position, address }) => {
-                setPosition(position);
-                setAddresss(address);
+                console.log("hi");
               }}
             />
             <button
