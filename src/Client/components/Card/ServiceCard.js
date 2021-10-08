@@ -17,7 +17,7 @@ export default function ServiceCard({ service, setIsBackDrop }) {
 
   useEffect(() => {
     setImage(`${PORT}servicesImage/${service._id}`);
-  }, []);
+  }, [service._id]);
 
   const addToCartHandler = () => {
     dispatch(addToCart(service._id));

@@ -4,7 +4,7 @@ import OurTeam from "./HomePage/OurTeam";
 import Typed from "react-typed";
 import LocationDropDownButton from "../components/buttons/LocationDropDownButton";
 import { useDispatch } from "react-redux";
-import { SET_LOCATION, REMOVE_LOCATION } from "../../actions/type";
+import { SET_LOCATION } from "../../actions/type";
 import WelcomePageCarosel from "../components/WelcomePageCarosel/WelcomePageCarosel";
 import ServiceList from "../components/ServiceList";
 import { Scrollbars } from "react-custom-scrollbars";
@@ -28,7 +28,7 @@ export default function Home() {
         payload: Location,
       });
     }
-  }, [Location]);
+  }, [Location, dispatch]);
 
   const handleChange = (e) => {
     setlocation(e.target.value);
@@ -262,7 +262,7 @@ export default function Home() {
           <div className="py-2 px-10 w-56">
             <Link to="/ServiceDetailsGents">
               {" "}
-              <img src={ImgGents} />
+              <img alt="meaningfull" src={ImgGents} />
               <div className="text-sitetheme-blue text-center">
                 Gents Services
               </div>
@@ -271,7 +271,7 @@ export default function Home() {
           <div className="py-2 px-10 w-64">
             {" "}
             <Link to="/ServiceDetailsWomen">
-              <img src={Imgwomen} />{" "}
+              <img alt="meaningfull" src={Imgwomen} />{" "}
               <div className="text-sitetheme-blue text-center">
                 Women Services
               </div>
@@ -279,7 +279,7 @@ export default function Home() {
           </div>
           <div className="py-2 px-10 w-56">
             <Link to="/ServiceDetailsKids">
-              <img src={ImgKids} />{" "}
+              <img alt="meaningfull" src={ImgKids} />{" "}
               <div className="text-sitetheme-blue text-center">
                 Kids Services
               </div>

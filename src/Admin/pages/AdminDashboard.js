@@ -5,11 +5,11 @@ import BookingDetails from "../../Admin/components/BookingDetails";
 
 export default function Dashboard() {
   const dispatch = useDispatch();
-  const { cart, cartLoading } = useSelector((state) => state.cart);
+  const { cart } = useSelector((state) => state.cart);
 
   useEffect(() => {
     dispatch(getCart());
-  }, []);
+  }, [dispatch]);
   return (
     <div className=" grid grid-cols-5 gap-4	h-screen ">
       <div className="flex flex-col border-r border-solid">

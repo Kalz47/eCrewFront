@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function OurTeam() {
   return (
@@ -25,7 +26,7 @@ export default function OurTeam() {
               <p className="leading-relaxed text-base">
                 No hidden cost! What you see is what you spend.
               </p>
-              <a className="mt-3 text-sitetheme-blue inline-flex items-center">
+              <Link className="mt-3 text-sitetheme-blue inline-flex items-center">
                 Learn More
                 <svg
                   fill="none"
@@ -38,7 +39,7 @@ export default function OurTeam() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -53,7 +54,7 @@ export default function OurTeam() {
                 Experienced and well-trained professionals hand-picked just for
                 you!
               </p>
-              <a className="mt-3 text-sitetheme-blue inline-flex items-center">
+              <Link className="mt-3 text-sitetheme-blue inline-flex items-center">
                 Learn More
                 <svg
                   fill="none"
@@ -66,7 +67,7 @@ export default function OurTeam() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -81,7 +82,7 @@ export default function OurTeam() {
                 Let’s handle your service needs with the best hands in the
                 industry
               </p>
-              <a className="mt-3 text-sitetheme-blue inline-flex items-center">
+              <Link className="mt-3 text-sitetheme-blue inline-flex items-center">
                 Learn More
                 <svg
                   fill="none"
@@ -94,7 +95,7 @@ export default function OurTeam() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="p-4 md:w-1/2 flex flex-col text-center items-center">
@@ -109,7 +110,7 @@ export default function OurTeam() {
                 Let’s handle your service needs with the best hands in the
                 industry
               </p>
-              <a className="mt-3 text-sitetheme-blue inline-flex items-center">
+              <Link className="mt-3 text-sitetheme-blue inline-flex items-center">
                 Learn More
                 <svg
                   fill="none"
@@ -122,7 +123,7 @@ export default function OurTeam() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="p-4 md:w-1/2 flex flex-col text-center items-center">
@@ -137,7 +138,7 @@ export default function OurTeam() {
                 You can be confident that the services are conducted with proper
                 safety regulations
               </p>
-              <a className="mt-3 text-sitetheme-blue inline-flex items-center">
+              <Link className="mt-3 text-sitetheme-blue inline-flex items-center">
                 Learn More
                 <svg
                   fill="none"
@@ -150,7 +151,7 @@ export default function OurTeam() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

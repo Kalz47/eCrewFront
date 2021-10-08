@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
-import Footer from "./HomePage/Footer";
 import Popup from "reactjs-popup";
-import Register from "./Register";
 import UserDetails from "../components/Card/UserDetails";
-import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import { useSelector, useDispatch } from "react-redux";
 import { addToDb, removeFromCart } from "../../actions/cart";
 import { getCouponByName } from "../../actions/coupon";
+import { Link } from "react-router-dom";
 
-export default function Cart({ close, history }) {
+export default function Cart({ history }) {
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
-  const { coupon, validate, couponLoading, error, number } = useSelector(
-    (state) => state.coupon
-  );
+  const { coupon, validate, number } = useSelector((state) => state.coupon);
   const [couponName, setCouponName] = useState("");
   const [price, setPrice] = useState(0);
   const [dis, setDis] = useState(0);
@@ -29,10 +24,8 @@ export default function Cart({ close, history }) {
     userPhone: "",
   });
 
-  //
-
-  const { userName, userEmail, address, city, province, userProvince } =
-    userValues;
+  // const { userName, userEmail, address, city, province, userProvince } =
+  //   userValues;
   const [location, setLocation] = useState({
     long: "",
     lat: "",
@@ -135,16 +128,16 @@ export default function Cart({ close, history }) {
                   cartItems.map((c) => (
                     <tr>
                       <td className="hidden pb-4 md:table-cell">
-                        <a href="#">
+                        <Link href="#">
                           <img
                             src={`http://localhost:8000/api/servicesImage/${c.product}`}
                             className="w-20 rounded"
                             alt="Thumbnail"
                           />
-                        </a>
+                        </Link>
                       </td>
                       <td>
-                        <a href="#">
+                        <Link href="#">
                           <p className="mb-2 md:ml-4">{c.name}</p>
                           <button
                             type="submit"
@@ -153,7 +146,7 @@ export default function Cart({ close, history }) {
                           >
                             <small>(Remove item)</small>
                           </button>
-                        </a>
+                        </Link>
                       </td>
                       <td className="hidden text-right md:table-cell">
                         <span className="text-sm lg:text-base font-medium">

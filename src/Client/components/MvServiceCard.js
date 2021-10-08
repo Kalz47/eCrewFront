@@ -17,7 +17,7 @@ export default function MvServiceCard({ close, service, setIsBackDrop }) {
 
   useEffect(() => {
     setImage(`http://localhost:8000/api/servicesImage/${service._id}`);
-  }, []);
+  }, [service._id]);
 
   const addToCartHandler = () => {
     dispatch(addToCart(service._id));

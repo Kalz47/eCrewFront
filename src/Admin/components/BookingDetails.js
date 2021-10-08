@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { cartDone, cartInProgress, getCart } from "../../actions/cart";
+import { cartDone, cartInProgress } from "../../actions/cart";
 
 export default function BookingDetails({ index, c }) {
   const dispatch = useDispatch();
@@ -88,7 +88,7 @@ export default function BookingDetails({ index, c }) {
 
         <div className="p-6 flex justify-center">
           <div className="px-2">
-            {c.processing == 0 ? (
+            {c.processing === 0 ? (
               <button
                 onClick={handleProcessing}
                 className="bg-sitetheme-blue  hover:bg-white hover:text-sitetheme-blue border border-sitetheme-blue text-white py-2 px-4 rounded-full"
@@ -102,7 +102,7 @@ export default function BookingDetails({ index, c }) {
             )}
           </div>
           <div className="px-2">
-            {c.processing == 1 ? (
+            {c.processing === 1 ? (
               <button
                 onClick={handleDone}
                 className="bg-sitetheme-blue  hover:bg-white hover:text-sitetheme-blue border border-sitetheme-blue text-white py-2 px-4 rounded-full"

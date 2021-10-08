@@ -3,6 +3,7 @@ import { useState } from "react";
 import { login } from "../../actions/auth";
 import { useDispatch } from "react-redux";
 import Footer from "./HomePage/Footer";
+import { Link } from "react-router-dom";
 
 const Login = ({ history }) => {
   const dispatch = useDispatch();
@@ -77,12 +78,12 @@ const Login = ({ history }) => {
               <div className="text-center mt-4">
                 <p className="text-sm text-gray-500">
                   Already have an account?{" "}
-                  <a
+                  <Link
                     href="#"
                     className="no-underline text-sitetheme-blue font-bold hover:text-blue-900"
                   >
                     Sign in
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
