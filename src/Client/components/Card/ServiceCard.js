@@ -231,10 +231,11 @@ export default function ServiceCard({ service, setIsBackDrop }) {
                                 <button
                                   onClick={() => {
                                     close();
+                                    setIsBackDrop(false);
                                   }}
                                   className="mb-2 md:mb-0 bg-white px-5 py-2 text-sm shadow-sm font-medium tracking-wider border border-sitetheme-blue text-sitetheme-blue rounded-full hover:shadow-lg hover-bg-sitetheme-blue hover:text-white"
                                 >
-                                  Contnue Shopping{" "}
+                                  Continue Shopping{" "}
                                 </button>
                               </div>
                             </div>
